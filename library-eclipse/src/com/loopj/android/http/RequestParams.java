@@ -196,13 +196,19 @@ public class RequestParams implements Serializable {
     public void put(String key, File file) throws FileNotFoundException {
         put(key, file, null, null);
     }
-
+    
     public void put(String key, File... files) throws FileNotFoundException {
     	for (File file : files) {
             put(key, file, null, null);    		
     	}
     }
 
+    public void put(String key, List<File> fileList) throws FileNotFoundException {
+    	for (File file : fileList) {
+            put(key, file, null, null);    		
+    	}
+    }
+    
     /**
      * Adds a file to the request with custom provided file name
      *
@@ -215,6 +221,19 @@ public class RequestParams implements Serializable {
         put(key, file, null, customFileName);
     }
 
+    public void put(String key, String customFileName, File... files) throws FileNotFoundException {
+        
+    	for(File file : files) {
+    		put(key, file, null, customFileName);
+    	}
+    }
+    
+    public void put(String key, String customFileName, List<File> fileList) throws FileNotFoundException {
+    	for(File file : fileList) {
+        	put(key, file, null, customFileName);    		
+    	}
+    }
+    
     /**
      * Adds a file to the request with custom provided file content-type
      *
@@ -225,8 +244,21 @@ public class RequestParams implements Serializable {
      */
     public void put(String key, File file, String contentType) throws FileNotFoundException {
         put(key, file, contentType, null);
-    }
+    }    
 
+    public void put(String key, File[] files, String contentType) throws FileNotFoundException {
+    	for(File file : files) {
+    		put(key, file, contentType, null);
+    	}
+    }       
+
+    public void put(String key, List<File> fileList, String contentType) throws FileNotFoundException {
+    	for(File file : fileList) {
+    		put(key, file, contentType, null);
+    	}
+    }    
+
+    
     /**
      * Adds a file to the request with both custom provided file content-type and file name
      *
