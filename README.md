@@ -1,9 +1,9 @@
-AndroidAysncHttpLibrary
+AndroidAsyncHttpLibrary
 =======================
 
-안드로이드 AysncHttp 오픈소스 라이브러리 (Loopj) 1.4.7 버전을 개선한 버전 입니다.
+안드로이드 AsyncHttp 오픈소스 라이브러리 (Loopj) 1.4.7 버전을 개선한 버전 입니다.
 
-AysncHttp 오픈소스 라이브러리는 단일 파일만 업로드가 가능합니다. 
+AsyncHttp 오픈소스 라이브러리는 단일 파일만 업로드가 가능합니다. 
 
 따라서, 본 오픈소스 프로젝트를 사용하시면 단일 파일 업로드 뿐만 아니라,
 
@@ -67,7 +67,7 @@ client.setURLEncodingEnabled(false);
 File Array, File List 형태 추가.
 
 [2014-09-28]
-1. 멀티 파일 업로드 추가.
+멀티 파일 업로드 추가.
 
 
 License
