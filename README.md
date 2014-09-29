@@ -21,9 +21,16 @@ POST 전송시 단일 File 뿐만 아니라 File Array 형태로 다중 파일 전송이 가능합니다.
 
 ```
 RequestParams params = new RequestParams();
+File[] files = new File[10];
+File file1 = new File("");
+File file1 = new File("");
+List<File> fileList = new ArrayList<File>();
 
 try {
-	params.put("images[]", file);
+	//key value
+	params.put("images[]", files);	
+	params.put("files[]", file1, file2);
+	params.put("filelist[]", fileList);
 } catch (FileNotFoundException e) {
 	e.printStackTrace();
 }
