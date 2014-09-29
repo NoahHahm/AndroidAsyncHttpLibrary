@@ -29,6 +29,15 @@ try {
 }
 ```
 
+RequestParams Method 추가 내역
+---------
+put(String key, File... files)
+put(String key, List<File> fileList)
+put(String key, String customFileName, File... files)
+put(String key, String customFileName, List<File> fileList)
+put(String key, File[] files, String contentType)
+put(String key, List<File> fileList, String contentType)
+
 
 에러 관련 해결방법
 ---------
@@ -38,9 +47,18 @@ setURLEncodingEnabled 를 비활성화 해주세요.
 
 (URL 인코딩이 자동 활성화 되어 있기 때문에 에러 생길 수 있습니다.)
 
+```
+AsyncHttpClient client = new AsyncHttpClient();
+client.setURLEncodingEnabled(false);
+```
+
 
 업데이트 내역
 ---------
+[2014-09-29]
+File Array, File List 형태 추가.
+
+[2014-09-28]
 1. 멀티 파일 업로드 추가.
 
 
